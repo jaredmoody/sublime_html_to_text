@@ -1,9 +1,14 @@
 # HTML to Text plugin for Sublime Text
 
 Converts files, selection and clipboard content from HTML to Text/Valid markdown
-using html2text
+using [html2text](https://github.com/aaronsw/html2text)
 
 ## Installation
+
+### [Sublime Package Control](http://wbond.net/sublime_packages/package_control)
+
+In the command Pallette choose **Package Control: Install Package** and select
+**HTML2Text**
 
 ### Git installation
 
