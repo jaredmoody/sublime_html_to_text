@@ -14,7 +14,7 @@ In the command Pallette choose **Package Control: Install Package** and select
 
 Clone the repository in your Sublime Text "Packages" directory:
 
-    git clone https://github.com/jaredmoody/sublime-html-to-text.git "HTML2Text"
+    git clone https://github.com/jaredmoody/sublime_html_to_text.git
 
 The "Packages" directory is located at:
 

@@ -1,6 +1,6 @@
-import json
 import sublime, sublime_plugin
-import html2text
+import sublime_html_to_text.html2text
+
 
 class HtmlToTextFromFileCommand(sublime_plugin.TextCommand):
   def run(self, edit):
@@ -8,7 +8,7 @@ class HtmlToTextFromFileCommand(sublime_plugin.TextCommand):
     target = source + '.md'
     with open(source, 'r') as f:
       html = f.read()
-    text = html2text.html2text(html)
+    text = sublime_html_to_text.html2text.html2text(html)
     if text != None:
       with open(target, 'w') as f:
         f.write(text)
@@ -22,7 +22,7 @@ class HtmlToTextFromSelectionCommand(sublime_plugin.TextCommand):
     for region in self.view.sel():
       if not region.empty():
         html = self.view.substr(region)
-        text = html2text.html2text(html)
+        text = sublime_html_to_text.html2text.html2text(html)
         if text != None:
           self.view.replace(edit, region, text)
 
@@ -32,7 +32,7 @@ class HtmlToTextFromSelectionCommand(sublime_plugin.TextCommand):
 class HtmlToTextFromClipboardCommand(sublime_plugin.TextCommand):
   def run(self, edit):
     html = sublime.get_clipboard()
-    text = html2text.html2text(html)
+    text = sublime_html_to_text.html2text.html2text(html)
     if text != None:
       for region in self.view.sel():
         self.view.replace(edit, region, text)

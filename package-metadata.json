@@ -1,0 +1,5 @@
+{
+    "description": "Converts files, selection and clipboard content from HTML to Text/Valid markdown using html2text",
+    "url": "https://github.com/jaredmoody/sublime_html_to_text",
+    "version": "2014.09.01.23.37.13"
+}
